@@ -1,26 +1,25 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Hello from './Hello';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App({name, age}) {
+  return <div>
+          Hello from App.js updated {name} 
+          <br />
+          Age={age-13}
+          <br />
+          <Hello firstName={name} ></Hello>
+         </div>
 }
+/*
+  This is another method of above functions to show in the webpage
+  function App(props) {
+  return <div>
+          Hello from App.js updated {props.name} 
+          <br />
+          Age={props.age-12}
+         </div>
+}*/
 
 export default App;
